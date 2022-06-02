@@ -1,3 +1,7 @@
+from hashlib import sha256
+from requests import request
+
+
 class datasets():
     LookUpOpts = ['ip',
                     'region',
@@ -55,6 +59,20 @@ class ip():
         result = s.connect_ex((ip,port))
         s.close()
         return True if result ==0 else False
+    
+class crypt():
+    
+    class base64():
+        
+        def encode(txtstring:str):
+            import base64,cryptography
+            base = base64.b64encode(txtstring.encode('utf-8'))
+            return str(base, "utf-8")
+            
+        def decode(txtstring:str):
+            import base64
+            base = base64.b64decode(txtstring.encode('utf-8'))
+            return str(base, "utf-8")
             
 
 print('This file should not be run as a standalone script\nPlease import this file as \n"from inutils import ip"\nto use the functions of this file')if (__name__ =='__main__')else ('')
