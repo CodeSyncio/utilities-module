@@ -1,2 +1,2 @@
-# internet-utilities
- library with handy internet tool stuff
+# utilities-module
+ alot of things i commonly use i guess
